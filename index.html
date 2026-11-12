@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Franz Bite – Good Food, Anytime</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&family=Cormorant+Garamond:wght@600;700&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<template id="hdr">
+  <header class="hdr">
+    <img class="logo" src="images/logo.png" alt="Franz Bite logo">
+    <img class="wordmark" src="images/wordmark.png" alt="Franz Bite – Good Food, Anytime">
+    <form class="search" role="search"><input type="text" placeholder="search" aria-label="Search menu"><button type="submit" aria-label="Search"><img src="images/search.png" alt=""></button></form>
+    <button class="cart" aria-label="Cart"><img src="images/cart.png" alt=""><span class="badge" hidden>0</span></button>
+    <nav class="nav">
+      <a href="#home" data-v="home">Home</a><a href="#menu" data-v="menu">Menu</a><a href="#about" data-v="about">About</a><a href="#contact" data-v="contact">contact</a>
+    </nav>
+    <div class="user"><img src="images/avatar.png" alt=""><small>Franz Dominic Labuanan</small></div>
+  </header>
+</template>
+
+<!-- HOME -->
+<section class="view" id="home">
+  <div class="hdr-slot"></div>
+  <div class="hero"><div class="in">
+    <div class="hero-text">
+      <h1>WELCOME! <em>Franz</em></h1>
+      <p>Your Favorite<br>Fast Food Online</p>
+      <button class="order" data-go="menu">Order now</button>
+    </div>
+    <img src="images/hero-logo.png" alt="Franz Bite logo">
+  </div></div>
+  <div class="popular">
+    <h2>Popular Menu</h2><a href="#menu" class="viewall">View all</a>
+    <div class="pop-grid" id="popGrid"></div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="view" id="menu">
+  <aside class="side">
+    <h2>CATEGORY</h2>
+    <ul id="cats">
+      <li class="on" data-c="all"><img src="images/cat-all.png" alt="">All Item</li>
+      <li data-c="burger"><img src="images/cat-burger.png" alt="">Burger</li>
+      <li data-c="drinks"><img src="images/cat-drinks.png" alt="">Drinks</li>
+      <li data-c="pasta"><img src="images/cat-pasta.png" alt="">Pasta</li>
+      <li data-c="dessert"><img src="images/cat-dessert.png" alt="">Dessert</li>
+      <li data-c="sides"><img src="images/cat-sides.png" alt="">Sides</li>
+    </ul>
+  </aside>
+  <div class="menu-main">
+    <div class="hdr-slot menu-bar"></div>
+    <div class="menu-title"><h2>Our Menu</h2><p>fresh Ingredients,great taste,satisfy your cravings</p></div>
+    <img class="big-cart" src="images/big-cart.png" alt="">
+    <button class="arrow l" aria-label="Previous">&#10094;</button>
+    <div class="track" id="track"></div>
+    <button class="arrow r" aria-label="Next">&#10095;</button>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="view" id="about">
+  <div class="hdr-slot"></div>
+  <div class="banner about-banner"><div class="in">
+    <img class="info" src="images/info.png" alt="">
+    <div><img src="images/about-word.png" alt="Franz Bite – Good Food, Anytime"><p>FranzBite is your go-to destination for delicious fast food. made with fresh ingredients and served with care. We’re passionate about bringing great taste, convenience, and happiness to your table.</p></div>
+  </div></div>
+  <div class="features">
+    <div class="f"><img src="images/f-basket.png" alt=""><h3>Fresh Ingredients</h3><p>We use the fresh ingredients only for the best taste.</p></div>
+    <div class="f"><img src="images/f-heart.png" alt=""><h3>Quality Foods</h3><p>Every Meal is prepared with care and quality.</p></div>
+    <div class="f"><img src="images/f-delivery.png" alt=""><h3>Fast Delivery</h3><p>We deliver your food quickly and safely.</p></div>
+    <div class="f"><img src="images/f-smile.png" alt=""><h3>Satisfied Customer</h3><p>Your satisfaction is our priority</p></div>
+    <div class="f rate"><img src="images/f-star.png" alt=""><h3>Ratings</h3><strong>5.0</strong><span>★★★★★</span></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="view" id="contact">
+  <div class="hdr-slot"></div>
+  <div class="banner contact-banner"><div class="in">
+    <p>We’d love to hear from you! Whether<br>you have a question, feedback, or just<br>want to say hi, feel free to reach out.</p>
+    <img src="images/mail.png" alt="">
+  </div></div>
+  <div class="contact-body">
+    <ul class="info-list">
+      <li><img src="images/i-pin.png" alt=""><div><h3>Address</h3><p>Purok 5 LDP,Iba,Zambales,Philippines</p></div></li>
+      <li><img src="images/i-phone.png" alt=""><div><h3>Call us</h3><p>+63 934 545 2232</p></div></li>
+      <li><img src="images/i-mail.png" alt=""><div><h3>Email us</h3><p>example@gmail.com</p></div></li>
+      <li><img src="images/i-clock.png" alt=""><div><h3>Business Hours</h3><p>Monday-Saturday 9:00am-6:30pm</p></div></li>
+    </ul>
+    <form class="msg" id="msgForm" novalidate>
+      <h2>Send as a message</h2>
+      <label>Full Name<input name="name" required></label>
+      <label>Address<input name="address"></label>
+      <label>Email Address<input name="email" type="email" required></label>
+      <label>Rate<input name="rate"></label>
+      <label class="full">Message<textarea name="message" placeholder="Type your message here....." required></textarea></label>
+      <button type="submit">Send message</button>
+      <p class="note" id="note" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
